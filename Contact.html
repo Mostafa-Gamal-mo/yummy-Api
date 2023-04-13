@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="JS, JS OOP, API">
+  <meta name="Route" content="Route">
+  <link rel="icon" href="img/logo.png">
+  <title>Yummy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/contactstyle.css">
+
+
+
+</head>
+
+<body>
+  
+
+  <div class="loading-screen">
+
+    <div class="ring">Loading
+      <span></span>
+    </div>
+  </div>
+
+
+
+  
+  <div class="mynav d-flex justify-content-between">
+ <div id="sideMenu">
+  <div class="d-flex flex-column justify-content-between h-100 text-white">
+    <div class=" m-4 d-flex flex-column">
+      
+        <a href="search.html" class="text-white m-2" id="Search">Search</a>
+        <a href="Categories.html" class="text-white m-2" id="Categories">Categories</a>
+        <a href="area.html" class="text-white m-2"  id="Area">Area</a> 
+        <a href="ingredients.html" class="text-white m-2"  id="Ingredients">Ingredients</a> 
+        <a href="Contact.html" class="text-white m-2 "  id="Contact">Contact US</a>
+        
+    </div>
+    <div class=" m-4">
+      <div class="nav-icons">
+  
+        <i class="fa-brands fa-facebook  text-white"></i>
+        <i class="fa-brands fa-twitter text-white"></i>
+        <i class="fa-solid fa-globe text-white"></i>
+      </div>
+     <p>Copyright Â© 2019 All Rights Reserved.
+     </p>
+  </div>
+    </div>
+ </div>
+ 
+      <div class="nav-bar ps-4">
+        <div class="nav-items d-flex flex-column align-items-center justify-content-between h-100">
+          <div class="nav-img mt-4 me-4">
+            <img src="img/logo.png" class="w-100" alt="logo">
+          </div>
+          <div class="nav-gicon">
+            <i class="fa-solid fa-bars fa-2x" id="menuIcone"></i>
+    
+          </div>
+          <div class="nav-img">
+            <i class="fa-solid fa-globe"></i>
+            <br>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+          
+          </div>
+      </div>
+    </div> 
+  
+
+
+<div class="container  min-vh-100 d-flex align-items-center justify-content-center" >
+  <div class="row mt-5 g-md-4 w-75 m-auto">
+
+
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="text" onkeyup="validatonName(this.value)"  id="eNAme"    class="form-control bg-white text-black"  placeholder="Enter Your Name" aria-label="Username" aria-describedby="basic-addon1">
+            <p class="  alert alert-danger m-3 invalid-feedback">Special characters and numbers not allowed</p>
+          </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="email"  onkeyup="validatonEmail(this.value)" id="Email"   class="form-control bg-white text-black"   placeholder="Enter Your Email"   aria-label="Username" aria-describedby="basic-addon1">
+            <p class="  alert alert-danger m-3 invalid-feedback">Email not valid *exemple@yyy.zzz</p>
+
+          </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="tel" onblur="validatonPhone(this.value)" id="Phone"  class="form-control bg-white text-black"   placeholder="Enter Your Phone"  aria-label="Username" aria-describedby="basic-addon1">
+            <p class="  alert alert-danger m-3 invalid-feedback">Enter valid Phone Number</p>
+          </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="number" onblur="validatonAge(this.value)" id="Age"   class="form-control bg-white text-black"  placeholder="Enter Your Age"   aria-label="Username" aria-describedby="basic-addon1">
+            <p class="  alert alert-danger m-3 invalid-feedback">Enter valid age</p>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="password" onkeyup="validatonPassword(this.value)" id="Password"  class="form-control bg-white text-black"   placeholder="Enter Your Password"   aria-label="Username" aria-describedby="basic-addon1">
+              <p class="  alert alert-danger m-3 invalid-feedback">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+          </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+          <div class="input-group ">
+            <input type="password"  onblur="validatonRePassword()" id="REPassword"  class="form-control bg-white text-black"  placeholder="REpassword"  aria-label="Username" aria-describedby="basic-addon1">
+            <p class="  alert alert-danger m-3 invalid-feedback">Enter valid repassword</p>
+
+          </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-12 d-flex align-items-center justify-content-center">
+      <button id="submitBtn" disabled="" type="submit" class="btn btn-outline-danger px-2 mt-3 m-auto">Submit</button>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/Contact.js" ></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
